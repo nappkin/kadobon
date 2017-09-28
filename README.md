@@ -1,4 +1,6 @@
 
+!(https://github.com/nappkin/kadobon/blob/master/pkpass.png)
+
 Een restaurant kan op de website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com).
 
 ## Soorten kadobonnen 
