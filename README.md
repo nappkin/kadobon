@@ -14,23 +14,23 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
 ```
 [
     {
-        "id": 3,
+        "id": 1,
         "name": "Kadobon / Diner",
-        "amount": 40,
+        "amount": 50,
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&count=1"
     },
     {
-        "id": 5361,
-        "name": "Kadobon? / Diner",
-        "amount": 0.01,
+        "id": 2,
+        "name": "All-in menu 5 gangen / Diner",
+        "amount": 75,
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5361&email=[EMAIL]&count=1"
     },
     {
-        "id": 5362,
-        "name": "Kadobonnetje / Diner",
-        "amount": 50,
+        "id": 3,
+        "name": "All-in menu 6 gangen / Diner",
+        "amount": 95,
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5362&email=[EMAIL]&count=1"
     }
