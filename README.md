@@ -1,6 +1,19 @@
+Om een kadobon te kunnen kopen zijn de volgende gegevens nodig:
+- id van het restaurant
+- emailadres van de koper
+- id van het type kadobon
+
+Het id van het restaurant kun je navragen bij help@nappkin.nl.
+
+De verschillende typen kadobonnen kun je opvragen met de volgende url
+```
+https://cellarapp.apphb.com/api/v1/coupon?company=ID
+```
+waarbij `ID` het id is van het restaurant
+Het response bevat informatie over de verschillende kadobonnen die het restaurant aanbiedt. 
 ```
 {
-    "info": "url: the address you should direct the user to upon clicking 'buy' (enter the email adress the user has entered and the count of items to purchase). This endpoint will redirect to Mollie to initiate iDEAL payment.\nredirectUrl: page on restaurant site the user will be directed to after payment.",
+    "info": "url: the address you should direct the user to upon clicking 'buy'",
     "coupons": [
         {
             "id": 3,
@@ -11,16 +24,16 @@
         },
         {
             "id": 5361,
-            "header": "Kadobon?",
+            "header": "All-in 4 gangen menu",
             "subheader": "Diner",
-            "amount": 0.01,
+            "amount": 75,
             "url": "https://cellarapp.apphb.com/api/v1/coupon?company=449&coupon=5361&email=xxxxx&count=1"
         },
         {
             "id": 5362,
-            "header": "Kadobonnetje",
+            "header": "All-in 6 gangen menu",
             "subheader": "Diner",
-            "amount": 50,
+            "amount": 100,
             "url": "https://cellarapp.apphb.com/api/v1/coupon?company=449&coupon=5362&email=xxxxx&count=1"
         }
     ]
