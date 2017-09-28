@@ -1,5 +1,5 @@
 
-Een restaurant dat gebruik maakt van [Nappkin](http://www.nappkin.nl) kan op de website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com). Dit document is bedoeld voor developers die de website van een Nappkin gebruiker geschikt willen maken voor de verkoop van kadobonnen.
+Een restaurant dat gebruik maakt van [Nappkin](http://www.nappkin.nl) kan op zijn website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com). Dit document is bedoeld voor developers die de website van een Nappkin gebruiker geschikt willen maken voor de verkoop van kadobonnen.
 
 ![coupon](https://github.com/nappkin/kadobon/blob/master/pkpass.png)
 
@@ -40,7 +40,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
 De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker.
 
 #### redirectUrl
-De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart.
+De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
 
 #### amount
 De waarde van de betreffende kadobon.
@@ -53,7 +53,10 @@ De website van het restaurant moet minimaal een `input` element bevatten voor he
 ```
 https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&count=1
 ```
-waarbij `[COUPON]` het `id` is van de kadobon.
+waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevulde emailadres en `[COMPANY]` het Nappkin id van het restaurant.
 
 
-Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. 
+Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. Je kunt hierbij gebruik maken van de velden `name` en `amount` in  bovengenoemde response.
+
+## Contact
+Als je vragen hebt mail ons dan op help@nappkin.nl
