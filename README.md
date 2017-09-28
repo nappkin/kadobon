@@ -1,6 +1,6 @@
 ## Nappkin kadobonnen
 
-Een restaurant dat gebruik maakt van [Nappkin](http://www.nappkin.nl) kan op zijn website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com). Dit document is bedoeld voor developers die de website van een Nappkin gebruiker geschikt willen maken voor de verkoop van kadobonnen.
+Een restaurant dat gebruik maakt van [Nappkin](http://www.nappkin.nl) kan op zijn website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com). Dit document is bedoeld voor developers/designers die de website van een Nappkin gebruiker geschikt willen maken voor de verkoop van kadobonnen.
 
 ![coupon](https://github.com/nappkin/kadobon/blob/master/pkpass.png)
 
