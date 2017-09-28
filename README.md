@@ -35,7 +35,7 @@ Het response is een array met informatie per type kadobon:
 ]
 ```
 #### purchaseUrl
-De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het [EMAIL]adres moet opgevraagd worden bij de gebruiker.
+De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker.
 
 #### redirectUrl
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart.
@@ -51,7 +51,7 @@ De website van het restaurant moet minimaal een `input` element bevatten voor he
 ```
 https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&count=1
 ```
-waarbij `[COUPON]` het id is van de kadobon.
+waarbij `[COUPON]` het `id` is van de kadobon.
 
 
 Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. 
