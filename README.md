@@ -1,19 +1,12 @@
 
-Een restaurant kan op de website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar Mollie.
-
-Om een kadobon te kunnen kopen zijn de volgende gegevens nodig:
-- id van het restaurant
-- emailadres van de koper
-- id van het type kadobon
-
-Het id van het restaurant kun je navragen bij help@nappkin.nl.
+Een restaurant kan op de website kadobonnen aanbieden aan bezoekers. De betaling en verzending van de kadobon wordt geregeld door Nappkin met hulp van betalingsafhandelaar [Mollie](http://www.mollie.com).
 
 ## Soorten kadobonnen 
 De verschillende typen kadobonnen  die door een restaurant worden aangeboden kun je opvragen met de volgende url
 ```
 https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]
 ```
-waarbij `[COMPANY]` het id is van het restaurant
+waarbij `[COMPANY]` het id is van het restaurant; dit kun je navragen bij help@nappkin.nl
 
 Het response is een array met informatie per type kadobon:
 ```
@@ -41,16 +34,16 @@ Het response is een array met informatie per type kadobon:
     }
 ]
 ```
-### purchaseUrl
-De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow.
+#### purchaseUrl
+De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het [EMAIL]adres moet opgevraagd worden bij de gebruiker.
 
-### redirectUrl
+#### redirectUrl
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart.
 
-### amount
+#### amount
 De waarde van de betreffende kadobon.
 
-### name
+#### name
 Omschrijving van de kadobon.
 
 ## Formulier
