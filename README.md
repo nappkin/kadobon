@@ -8,7 +8,7 @@ https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]
 ```
 waarbij `[COMPANY]` het id is van het restaurant; dit kun je navragen bij help@nappkin.nl
 
-Het response is een array met informatie per type kadobon:
+Het response is een array met informatie per type kadobon, of `404` als er nog geen kadobonnen zijn gedefinieerd:
 ```
 [
     {
