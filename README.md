@@ -18,24 +18,27 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "name": "Kadobon / Diner",
         "amount": 40,
         "redirectUrl": "",
-        "url": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&count=1"
     },
     {
         "id": 5361,
         "name": "Kadobon? / Diner",
         "amount": 0.01,
         "redirectUrl": "",
-        "url": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5361&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5361&email=[EMAIL]&count=1"
     },
     {
         "id": 5362,
         "name": "Kadobonnetje / Diner",
         "amount": 50,
         "redirectUrl": "",
-        "url": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5362&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=5362&email=[EMAIL]&count=1"
     }
 ]
 ```
+#### id
+Het unieke id van het type kadobon.
+
 #### purchaseUrl
 De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker.
 
