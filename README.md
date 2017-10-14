@@ -21,21 +21,21 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "name": "Kadobon / Diner",
         "amount": 50,
         "redirectUrl": "",
-        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
     {
         "id": 2,
         "name": "All-in menu 5 gangen / Diner",
         "amount": 75,
         "redirectUrl": "",
-        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
     {
         "id": 3,
         "name": "All-in menu 6 gangen / Diner",
         "amount": 95,
         "redirectUrl": "",
-        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     }
 ]
 ```
@@ -46,20 +46,20 @@ Het unieke id van het type kadobon.
 Omschrijving van de kadobon.
 
 #### `amount`
-De waarde van de betreffende kadobon.
+De waarde van de kadobon.
 
 #### `redirectUrl`
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
 
 #### `purchaseUrl`
-De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker.
+De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker. Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. De optionele '[TEXT]' parameter wordt in plaats van de standaard naam van het kadobontype op de kaart getoond.
 
 ## Formulier
 De website van het restaurant moet minimaal een `input` element bevatten voor het email adres van de koper en een "koop" button. Als de koper op de button klikt moet hij naar de volgende url geleid worden:
 ```
-https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&count=1
+https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1
 ```
-waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevulde emailadres en `[COMPANY]` het Nappkin id van het restaurant.
+waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevulde emailadres en `[COMPANY]` het Nappkin id van het restaurant. De parameters `[AMOUNT]` en `[TEXT]` zijn optioneel.
 
 
 Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. Je kunt hierbij gebruik maken van de velden `name` en `amount` in  bovengenoemde response.
