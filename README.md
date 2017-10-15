@@ -70,5 +70,11 @@ waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevul
 
 Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. Je kunt hierbij gebruik maken van de velden `name` en `amount` in  bovengenoemde response.
 
+#### `Amount`
+Bij een kadobon van het type `Amount` is het mogelijk om een eigen tekst te tonen op de kaart, zoals "Verjaardag Piet", Daarnaast kan men zelf de gewenste waarde van de bon bepalen. 
+
+#### `Event`
+Bij dit type moet de koper kunnen aangeven voor hoeveel personen de kadobon is.
+
 ## Contact
 Als je vragen hebt mail ons dan op help@nappkin.nl
