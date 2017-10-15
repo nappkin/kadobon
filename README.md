@@ -20,6 +20,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 1,
         "name": "Kadobon / Diner",
         "amount": 50,
+        "type": "Amount",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
@@ -27,6 +28,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 2,
         "name": "All-in menu 5 gangen / Diner",
         "amount": 75,
+        "type": "Amount",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
@@ -34,6 +36,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 3,
         "name": "All-in menu 6 gangen / Diner",
         "amount": 95,
+        "type": "Amount",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     }
@@ -48,11 +51,14 @@ Omschrijving van de kadobon.
 #### `amount`
 De waarde van de kadobon.
 
+#### `type`
+Een kadobon is van het type `Amount` of `Event`. Op een kadobon van het type `Amount` staat de waarde van de bon in euros. De gebruiker zal met de kadobon een gedeelte van de rekening kunnen voldoen. Bij het type `Event` staat op de kadobon geen bedrag maar in plaats daarvan het aantal personen. De naam van kadobon is bij dit type een beschrijving van de geleverde dienst, zoals 'All-in 5 gangen menu'. De gebruiker zal behoudens uitzonderingen de hele rekening met de kadobon voldoen.
+
 #### `redirectUrl`
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
 
 #### `purchaseUrl`
-De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker. Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. Als een `[TEXT]` parameter is opgenomen in de url dan wordt deze text op de kaart getoond in plaats van de standaard naam van het kadobontype.
+De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker. Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. Als een `[TEXT]` parameter is opgenomen in de url dan wordt deze tekst op de kaart getoond in plaats van de standaard naam van het kadobontype.
 
 ## Formulier
 De website van het restaurant moet minimaal een `input` element bevatten voor het email adres van de koper en een "koop" button. Als de koper op de button klikt moet hij naar de volgende url geleid worden:
