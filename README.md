@@ -74,7 +74,7 @@ Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken
 Bij een kadobon van het type `Amount` is het mogelijk om een eigen tekst te tonen op de kaart, zoals "Verjaardag Piet". Daarnaast kan men zelf de gewenste waarde van de bon bepalen. Om deze gegevens op te vragen zullen `input` elementen moeten worden opgenomen op de site.
 
 #### `Event`
-Bij dit type moet de koper kunnen aangeven voor hoeveel personen de kadobon is.
+Bij dit type moet de koper kunnen aangeven voor hoeveel personen de kadobon is. Dit is de `count` parameter in de `purchaseUrl`.
 
 ## Contact
 Als je vragen hebt mail ons dan op help@nappkin.nl
