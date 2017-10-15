@@ -52,7 +52,7 @@ Omschrijving van de kadobon.
 De waarde van de kadobon.
 
 #### `type`
-Een kadobon is van het type `Amount` of `Event`. Op een kadobon van het type `Amount` staat de waarde van de bon in euros. De gebruiker zal met de kadobon een gedeelte van de rekening kunnen voldoen. Bij het type `Event` staat op de kadobon geen bedrag maar in plaats daarvan het aantal personen. De naam van kadobon is bij dit type een beschrijving van de geleverde dienst, zoals 'All-in 5 gangen menu'. De gebruiker zal behoudens uitzonderingen de hele rekening met de kadobon voldoen.
+Een kadobon is van het type `Amount` of `Event`. Op een kadobon van het type `Amount` staat de waarde van de bon in euros zichtbaar vermeld. De gebruiker zal met de kadobon een gedeelte van de rekening kunnen voldoen.<br/>Bij het type `Event` staat op de kadobon geen bedrag maar in plaats daarvan het aantal personen. De naam van kadobon is bij dit type een beschrijving van de geleverde dienst, zoals 'All-in 5 gangen menu'. De gebruiker zal behoudens uitzonderingen de hele rekening met de kadobon voldoen.
 
 #### `redirectUrl`
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
