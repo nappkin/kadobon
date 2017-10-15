@@ -30,7 +30,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "amount": 75,
         "type": "Event",
         "redirectUrl": "",
-        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&text=[TEXT]&count=1"
     },
     {
         "id": 3,
@@ -38,7 +38,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "amount": 95,
         "type": "Money",
         "redirectUrl": "",
-        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&text=[TEXT]&count=1"
     }
 ]
 ```
@@ -58,7 +58,9 @@ Een kadobon is van het type `Money` of `Event`. Op een kadobon van het type `Mon
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
 
 #### `purchaseUrl`
-De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker. Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. Als een `[TEXT]` parameter is opgenomen in de url dan wordt deze tekst op de kaart getoond in plaats van de standaard naam van het kadobontype.
+De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint retourneert vervolgens een redirect naar [Mollie](http://www.mollie.com) die zorgt voor de iDEAL flow. Het `[EMAIL]`adres moet opgevraagd worden bij de gebruiker.
+
+Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. Als een `[TEXT]` parameter is opgenomen in de url dan wordt deze tekst op de kaart getoond in plaats van de standaard naam van het kadobontype. Deze twee optionele parameters zijn alleen van toepasssing bij een kadobon van het type `Money`.
 
 ## Formulier
 De website van het restaurant moet minimaal een `input` element bevatten voor het email adres van de koper en een "koop" button. Als de koper op de button klikt moet hij naar de volgende url geleid worden:
