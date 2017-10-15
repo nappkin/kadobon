@@ -20,7 +20,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 1,
         "name": "Kadobon / Diner",
         "amount": 50,
-        "type": "Amount",
+        "type": "Money",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
@@ -28,7 +28,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 2,
         "name": "All-in menu 5 gangen / Diner",
         "amount": 75,
-        "type": "Amount",
+        "type": "Event",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
@@ -36,7 +36,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "id": 3,
         "name": "All-in menu 6 gangen / Diner",
         "amount": 95,
-        "type": "Amount",
+        "type": "Money",
         "redirectUrl": "",
         "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     }
@@ -52,7 +52,7 @@ Omschrijving van de kadobon.
 De waarde van de kadobon.
 
 #### `type`
-Een kadobon is van het type `Amount` of `Event`. Op een kadobon van het type `Amount` staat de waarde van de bon in euros zichtbaar vermeld. De gebruiker zal met de kadobon een gedeelte van de rekening kunnen voldoen.<br/>Bij het type `Event` staat op de kadobon geen bedrag maar in plaats daarvan het aantal personen. De naam van kadobon is bij dit type een beschrijving van de geleverde dienst, zoals 'All-in 5 gangen menu'. De gebruiker zal behoudens uitzonderingen de hele rekening met de kadobon voldoen.
+Een kadobon is van het type `Money` of `Event`. Op een kadobon van het type `Money` staat de waarde van de bon in euros zichtbaar vermeld. De gebruiker zal met de kadobon een gedeelte van de rekening kunnen voldoen.<br/>Bij het type `Event` staat op de kadobon geen bedrag maar in plaats daarvan het aantal personen. De naam van kadobon is bij dit type een beschrijving van de geleverde dienst, zoals 'All-in 5 gangen menu'. De gebruiker zal behoudens uitzonderingen de hele rekening met de kadobon voldoen.
 
 #### `redirectUrl`
 De pagina op de restaurant website waar de gebruiker terecht komt nadat de iDEAL betaling is uitgevoerd. Dit kan dezelfde pagina zijn als de pagina waar de aankoop is gestart of een speciale pagina met een beschrijving van de voorwaarden etc.
@@ -70,8 +70,8 @@ waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevul
 
 Als er meerdere soorten kadobonnen zijn moet de gebruiker een keuze kunnen maken, bijvoorbeeld met een `select` element. Je kunt hierbij gebruik maken van de velden `name` en `amount` in  bovengenoemde response.
 
-#### `Amount`
-Bij een kadobon van het type `Amount` is het mogelijk om een eigen tekst te tonen op de kaart, zoals "Verjaardag Piet". Daarnaast kan men zelf de gewenste waarde van de bon bepalen. Om deze gegevens op te vragen zullen `input` elementen moeten worden opgenomen op de site.
+#### `Money`
+Bij een kadobon van het type `Money` is het mogelijk om een eigen tekst te tonen op de kaart, zoals "Verjaardag Piet". Daarnaast kan men zelf de gewenste waarde van de bon bepalen. Om deze gegevens op te vragen zullen `input` elementen moeten worden opgenomen op de site.
 
 #### `Event`
 Bij dit type moet de koper kunnen aangeven voor hoeveel personen de kadobon is. Dit is de `count` parameter in de `purchaseUrl`.
