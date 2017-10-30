@@ -7,13 +7,19 @@ Dit document is bedoeld voor developers/designers die de website van een Nappkin
 ![coupon](https://github.com/nappkin/kadobon/blob/master/pkpass.png)
 
 ## Quick setup
-De snelste en eenvoudigste manier om de website gereed te maken voor verkoop van kadobonnen is het opnemen van de volgend tags
+De snelste en eenvoudigste manier om de website gereed te maken voor verkoop van kadobonnen is het opnemen van de volgende tags:
 ```
-<script src='https://coupons.nappkin.nl/widget.js' data-company='[COMPANY]' data-container='coupon-container' id='coupon-script'></script>
+<script
+    src='https://coupons.nappkin.nl/widget.js' 
+    data-company='[COMPANY]'
+    data-container='coupon-container'
+    id='coupon-script'>
+</script>
 ...
 <div id='coupon-container'></div>
 ```
 waarbij `[COMPANY]` het id is van het restaurant; dit kun je navragen bij help@nappkin.nl
+
 Het script zorgt er voor dat de `div` met het id `coupon-container` wordt gevuld met widget html.
 
 ## Custom setup
