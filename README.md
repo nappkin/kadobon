@@ -6,8 +6,20 @@ Dit document is bedoeld voor developers/designers die de website van een Nappkin
 
 ![coupon](https://github.com/nappkin/kadobon/blob/master/pkpass.png)
 
-## Soorten 
-De verschillende typen kadobonnen  die door een restaurant worden aangeboden kun je opvragen met de volgende url
+## Quick setup
+De snelste en eenvoudigste manier om de website gereed te maken voor verkoop van kadobonnen is het opnemen van de volgend tags
+```
+        <script src='https://coupons.nappkin.nl/widget.js' data-company='[COMPANY]' data-container='coupon-container' id='coupon-script'></script>
+        ...
+        <div id='coupon-container'></div>
+```
+waarbij `[COMPANY]` het id is van het restaurant; dit kun je navragen bij help@nappkin.nl
+
+## Custom setup
+Als je volledige controle wil over het design dan kan je via een script de verschillende typen kadobonnen opvragen en op basis daarvan een formulier genereren.
+
+### Soorten 
+De verschillende typen kadobonnen die door een restaurant worden aangeboden kun je opvragen met de volgende url
 ```
 https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]
 ```
@@ -62,7 +74,7 @@ De url waar de gebruiker naar geleid wordt om de kadobon te kopen. Dit endpoint 
 
 Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van de standaard waarde van het kadobon-type. Als een `[TEXT]` parameter is opgenomen in de url dan wordt deze tekst op de kaart getoond in plaats van de standaard naam van het kadobontype. Deze twee optionele parameters zijn alleen van toepasssing bij een kadobon van het type `Money`.
 
-## Formulier
+### Formulier
 De website van het restaurant moet minimaal een `input` element bevatten voor het email adres van de koper en een "koop" button. Als de koper op de button klikt moet hij naar de volgende url geleid worden:
 ```
 https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1
