@@ -28,7 +28,7 @@ Als je volledige controle wil over het design dan kan je via een script de versc
 ### Soorten 
 De verschillende typen kadobonnen die door een restaurant worden aangeboden kun je opvragen met de volgende url
 ```
-https://api.nappkin.nl/api/v1/coupon?company=[COMPANY]
+https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]
 ```
 waarbij `[COMPANY]` het id is van het restaurant; dit kun je navragen bij help@nappkin.nl
 
@@ -41,7 +41,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "amount": 50,
         "type": "Money",
         "redirectUrl": "",
-        "purchaseUrl": "https://api.nappkin.nl/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=1&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1"
     },
     {
         "id": 2,
@@ -49,7 +49,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "amount": 75,
         "type": "Event",
         "redirectUrl": "",
-        "purchaseUrl": "https://api.nappkin.nl/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&text=[TEXT]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=2&email=[EMAIL]&text=[TEXT]&count=1"
     },
     {
         "id": 3,
@@ -57,7 +57,7 @@ Het response is een array met informatie per type kadobon, of `404` als er nog g
         "amount": 95,
         "type": "Money",
         "redirectUrl": "",
-        "purchaseUrl": "https://api.nappkin.nl/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&text=[TEXT]&count=1"
+        "purchaseUrl": "https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=3&email=[EMAIL]&text=[TEXT]&count=1"
     }
 ]
 ```
@@ -84,7 +84,7 @@ Met een optionele `[AMOUNT]` parameter kan je een waarde opgeven die afwijkt van
 ### Formulier
 De website van het restaurant moet minimaal een `input` element bevatten voor het email adres van de koper en een "koop" button. Als de koper op de button klikt moet hij naar de volgende url geleid worden:
 ```
-https://api.nappkin.nl/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1
+https://cellarapp.apphb.com/api/v1/coupon?company=[COMPANY]&coupon=[COUPON]&email=[EMAIL]&amount=[AMOUNT]&text=[TEXT]&count=1
 ```
 waarbij `[COUPON]` het `id` is van de kadobon (zie boven), `[EMAIL]` het ingevulde emailadres en `[COMPANY]` het Nappkin id van het restaurant. De parameters `[AMOUNT]` en `[TEXT]` zijn optioneel.
 
